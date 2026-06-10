@@ -1,0 +1,487 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CORPO */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e8ece8;
+    color: #222;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+
+header {
+    border-bottom: 4px solid #d4af37;
+    background-color: #3d4d2c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 0.95rem;
+}
+
+.setor {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 8px 0;
+    color: #d4af37;
+}
+
+/* FORMULÁRIO */
+
+.formulario {
+    background-color: white;
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* CAMPOS */
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.grupo-campo label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #3d4d2c;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+    padding: 12px;
+    border: 1px solid #b8c0b8;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #556b2f;
+    box-shadow: 0 0 5px rgba(85, 107, 47, 0.4);
+}
+
+/* TEXTAREA */
+
+textarea {
+    resize: vertical;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.botoes button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ABRIR CHAMADO */
+
+#btnAbrir {
+    background-color: #556b2f;
+    color: white;
+}
+
+#btnAbrir:hover {
+    background-color: #465926;
+}
+
+/* LIMPAR */
+
+#btnLimpar {
+    background-color: #8b8b8b;
+    color: white;
+}
+
+#btnLimpar:hover {
+    background-color: #737373;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+    .botoes {
+        flex-direction: column;
+    }
+
+    body {
+        padding: 15px;
+    }
+}
+
+/* ==========================
+   LOGOS
+========================== */
+
+.cabecalho-topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.titulo-cabecalho {
+    text-align: center;
+}
+
+.logo {
+    width: 110px;
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   CABEÇALHO INSTITUCIONAL
+========================== */
+
+header h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+header h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   GRID DO FORMULÁRIO
+========================== */
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo-completo {
+    margin-top: 20px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .grid-formulario {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.grupo-campo input:hover,
+.grupo-campo select:hover,
+.grupo-campo textarea:hover {
+    border-color: #556b2f;
+}
+
+.botoes button:hover {
+    transform: translateY(-2px);
+}
+
+.mensagem-os {
+    display: none;
+}
+
+.mensagem-sucesso {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    background-color: #f0f7ee;
+
+    border-left: 6px solid #556b2f;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #2d572c;
+}
+
+/* ==========================
+   PAINEL DE CHAMADOS
+========================== */
+
+.painel-chamados {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+#tabelaChamados {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#tabelaChamados th {
+    background-color: #3d4d2c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+#tabelaChamados td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#tabelaChamados tr:hover {
+    background-color: #f5f5f5;
+}
+
+#tabelaChamados tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-detalhes {
+    background: none;
+    border: none;
+    padding: 0;
+
+    color: #556b2f;
+
+    font-size: 0.8rem;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+.btn-detalhes:hover {
+    color: #3d4d2c;
+}
+
+/* ==========================
+   MODAL
+========================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    z-index: 1000;
+}
+
+.modal-conteudo {
+
+    background-color: #ffffff;
+
+    width: 90%;
+    max-width: 700px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    margin: 5vh auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.modal-conteudo h2 {
+    color: #3d4d2c;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.fechar-modal {
+
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: #555;
+}
+
+.fechar-modal:hover {
+    color: #000;
+}
+
+.campo-modal {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.campo-modal strong {
+
+    display: block;
+
+    color: #3d4d2c;
+
+    margin-bottom: 5px;
+}
+
+.problema-modal {
+    margin-top: 5px;
+
+    text-align: left;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+}
+
+#conteudoModal {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+
+    .modal-conteudo {
+
+        width: 95%;
+
+        padding: 20px;
+
+        max-height: 90vh;
+    }
+
+}
+
+.status-select {
+
+    padding: 6px;
+
+    border-radius: 5px;
+
+    border: 1px solid #ccc;
+
+    cursor: pointer;
+
+    font-size: 0.85rem;
+}
+
+/* ==========================
+   STATUS DOS CHAMADOS
+========================== */
+
+.status-select {
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Aberta */
+
+.status-aberta {
+
+    background-color: #ffe5e5;
+
+    color: #b30000;
+}
+
+/* Em andamento */
+
+.status-em-andamento {
+
+    background-color: #fff3cd;
+
+    color: #856404;
+}
+
+/* Concluída */
+
+.status-concluída {
+
+    background-color: #d4edda;
+
+    color: #155724;
+}
+
+.info-painel {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+}

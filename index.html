@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço - TI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header>
+             <div class="cabecalho-topo">
+
+        <img
+            src="assets/imagens/brasao-eb.png"
+            alt="Brasão do Exército Brasileiro"
+            class="logo">
+
+        <div class="titulo-cabecalho">
+
+            <h2>EXÉRCITO BRASILEIRO</h2>
+
+            <h3>55º BATALHÃO DE INFANTARIA</h3>
+
+            <p class="setor">SEÇÃO DE INFORMÁTICA</p>
+
+            <h1>SISTEMA DE ORDEM DE SERVIÇO</h1>
+
+            <p>Controle de entrada e saída de equipamentos</p>
+
+        </div>
+
+        <img
+            src="assets/imagens/brasao-55bi.png"
+            alt="Brasão do 55º BI"
+            class="logo">
+
+    </div>
+        </header>
+
+        <section class="formulario">
+
+            <form id="ordemManutencao">
+
+    <div class="grid-formulario">
+
+        <div class="grupo-campo">
+            <label for="posto">Posto/Graduação:</label>
+            <input type="text" id="posto" name="posto" required>
+        </div>
+
+        <div class="grupo-campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="grupo-campo">
+            <label for="secao">Seção:</label>
+            <input type="text" id="secao" name="secao" required>
+        </div>
+
+        <div class="grupo-campo">
+            <label for="equipamento">Tipo de equipamento:</label>
+            <select id="equipamento" name="equipamento" required>
+                <option value="">Selecione</option>
+                <option>Desktop</option>
+                <option>Notebook</option>
+                <option>Outro</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="grupo-campo campo-completo">
+        <label for="problema">Descrição do problema:</label>
+        <textarea
+            id="problema"
+            name="problema"
+            rows="6"
+            placeholder="Descreva detalhadamente o problema apresentado."
+            required></textarea>
+    </div>
+
+    <div id="mensagemOS" class="mensagem-os"></div>
+
+    <div class="botoes">
+        <button id="btnAbrir" type="submit">
+            Abrir Chamado
+        </button>
+
+        <button id="btnLimpar" type="reset">
+            Limpar Campos
+        </button>
+    </div>
+
+</form>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

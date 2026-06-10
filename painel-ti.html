@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel TI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Painel da seção de informática</h1>
+            <h3>Controle de ordens de serviço</h3>
+        </header>
+
+        <section class="painel-chamados">
+
+            <p class="info-painel">
+                Exibindo apenas chamados em aberto ou em andamento.
+            </p>
+
+            <table id="tabelaChamados">
+
+                <thead>
+                    <tr>
+                        <th>OS</th>
+                        <th>Data</th>
+                        <th>Militar</th>
+                        <th>Seção</th>
+                        <th>Equipamento</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="js/painel.js"></script>
+
+    <div id="modalDetalhes" class="modal">
+
+    <div class="modal-conteudo">
+
+        <span class="fechar-modal" onclick="fecharModal()">
+            &times;
+        </span>
+
+        <h2>Detalhes do Chamado</h2>
+
+        <div id="conteudoModal"></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
